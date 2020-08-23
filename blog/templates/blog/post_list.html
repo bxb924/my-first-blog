@@ -7,7 +7,7 @@
                 {{ post.published_date }}
             </div>
             <h2 class="blog-post-title"><a class="text-dark" href="{% url 'post_detail' pk=post.pk %}" style="text-decoration:none;">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
+            <p>{{ post.text|truncatewords:30 }}</p>
         </div>
     {% endfor %}
 {% endblock %}
